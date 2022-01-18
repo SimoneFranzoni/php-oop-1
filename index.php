@@ -19,6 +19,34 @@ require_once __DIR__."/movie.php"
     <title>Movies</title>
 </head>
 <body>
+
+    <?php
     
+        $new_movie = new Movie("Me contro Te", "per bambini", "Lui", "60 min", "2");
+
+    ?>
+
+    <ul>
+        <li>
+            Nome: <?php echo $new_movie->name?>
+        </li>
+        <li>
+            Genere: <?php echo $new_movie->genre?>
+        </li>
+        <li>
+            Regista: <?php echo $new_movie->movie_director?>
+        </li>
+        <li>
+            Durata: <?php echo $new_movie->duration?>
+        </li>
+        <li>
+            Voto: <?php echo $new_movie->vote?>
+        </li>
+        <li>
+            <?php echo $new_movie->getReview()?>
+        </li>
+    </ul>
+
+
 </body>
 </html>
